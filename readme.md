@@ -7,15 +7,8 @@ All data is converted from the generalised clipped boundaries provided by the Of
 
 ## Folder Structure
 
-The json folder contains all data. The boundary files are organised by the lowest level boundary held within the files, and named according to the highest level boundary. As an example, the 'oa' folder contains boundary files for Output Areas. The Output Areas are collected together individually, in Lower Layer Super Output Areas, Middle Layer Super Output Areas and Local Area Districts.
 
 Anyone interested in the hierarchical structure of geographical data in the UK should take a look at this very good infographic: https://theidpblog.files.wordpress.com/2014/08/hierarchical_representation_of_uk_statistical_geographies_july_2014.pdf
-
-
-### Current Layout
-
-json
-  - oa
 
 
 
