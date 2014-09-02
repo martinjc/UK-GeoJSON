@@ -8,16 +8,24 @@ Data is organised according to the geographical hierarchy to which it belongs (s
 
 ## Folder Structure
 
+Data in the folders contains the following boundary information:
+
+
 | Folder | Description |
 |:--------:|:-------------|
-|json -> administrative|areas broken down into Local Authority Districts (LAD)  |
-|json -> electoral     |areas broken down into European Electoral Regions (EER), Westminster Parliamentary Constituencies (WPC), and Electoral Wards. Also contains data files for Wards and Westminster Parliamentary Constituencies collected by Local Authority District |
-|json -> eurostat      |Eurostat boundaries (NUTS level 1 & 2) for England and Wales |
-|json -> statistical   |Statistical areas for England and Wales. Contains Output Areas, Lower Layer Super Output Areas, and Middle Layer Super Output Areas by LAD. Also Output Areas gathered by LSOA and MSOA |
+|json/administrative|areas broken down into Local Authority Districts (LAD)  |
+|json/electoral     |areas broken down into European Electoral Regions (EER), Westminster Parliamentary Constituencies (WPC), and Electoral Wards. Also contains data files for Wards and Westminster Parliamentary Constituencies collected by Local Authority District |
+|json/eurostat      |Eurostat boundaries (NUTS level 1 & 2) for England and Wales |
+|json/statistical   |Statistical areas for England and Wales. Contains Output Areas, Lower Layer Super Output Areas, and Middle Layer Super Output Areas by LAD. Also Output Areas gathered by LSOA and MSOA |
+
+The naming convention for files depends on what data is present in the file. 
+* A file containing all of one class of data for a region will be in a folder named for that region, with the file named for the class of data. So, for example, eng/wards.json contains all the parliamentary wards for England. 
+* Data grouped by a sub-class will be in a folder describing the grouping, in a file named for the ID of the sub-class. So, for example, eng/wards_by_lad contains data files describing Parliamentary Wards, grouped by Local Authority District. eng/wards_by_lad/E06000001.json contains the Parliamentary Wards for Hartlepool.
+* a topo_ prefix denotes that the file contains TopoJSON. No prefix denotes GeoJSON.
+
 
 
 Anyone interested in the hierarchical structure of geographical data in the UK should take a look at this very good infographic: https://theidpblog.files.wordpress.com/2014/08/hierarchical_representation_of_uk_statistical_geographies_july_2014.pdf
-
 
 
 ## Licence Information
