@@ -3,10 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Uk-geojson by martinjc</title>
+    <title>UK-GeoJSON by martinjc</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+
+    <style>
+    .soa{ 
+        fill: none;
+        stroke: #000;
+        stroke-linejoin: round; 
+    }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,7 +22,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Uk-geojson</h1>
+        <h1>UK-GeoJSON</h1>
         <p>GeoJSON versions of UK Boundary Data</p>
 
         <p class="view"><a href="https://github.com/martinjc/UK-GeoJSON">View the Project on GitHub <small>martinjc/UK-GeoJSON</small></a></p>
@@ -26,33 +33,82 @@
           <li><a href="https://github.com/martinjc/UK-GeoJSON/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/martinjc/UK-GeoJSON">View On <strong>GitHub</strong></a></li>
         </ul>
+
+        <p>This archive contains both GeoJSON and TopoJSON files of data for UK boundaries, ideal for creating choropleth maps of UK areas.</p>
+
+        <p>All data is converted from the generalised clipped boundaries provided by the Office of National Statistics and Ordnance Survey. Data has been converted to GeoJSON from original shapefiles using ogr2ogr, then converted to TopoJSON using topojson. </p>
+
       </header>
-      <section>
-        <h1>
-<a name="geojson--topojson-collection-of-uk-boundary-data" class="anchor" href="#geojson--topojson-collection-of-uk-boundary-data"><span class="octicon octicon-link"></span></a>GeoJSON &amp; TopoJSON collection of UK boundary data</h1>
 
-<p>This archive contains both GeoJSON and TopoJSON files of data for UK boundaries, ideal for creating choropleth maps of UK areas.</p>
+      <section id="map">
+    
 
-<p>All data is converted from the generalised clipped boundaries provided by the Office of National Statistics and Ordnance Survey. Data has been converted to GeoJSON from original shapefiles using ogr2ogr, then converted to TopoJSON using topojson. </p>
 
-<p>Created by <a href="https://github.com/martinjc" class="user-mention">@martinjc</a></p>
       </section>
+
       <footer>
         <p>This project is maintained by <a href="https://github.com/martinjc">martinjc</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme adapted from original theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
+
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-54344943-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/topojson.v1.min.js"></script>
+    <script src="js/scale.fix.js"></script>
+
+    <script>         
+
+    var width = 500,
+        height = 800;
+
+    var projection = d3.geo.albers()
+        .rotate([0, 0]);
+
+    var path = d3.geo.path()
+        .projection(projection);
+
+    var svg = d3.select("#map").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    var file_name = "wpc";
+    var object_id = "NU"
+
+    d3.json("topo_" + file_name + ".json", function(error, boundaries) {
+        if (error) return console.error(error);
+
+        projection
+            .scale(1)
+            .translate([0,0]);
+
+        var b = path.bounds(topojson.feature (boundaries, boundaries.objects[file_name]));
+        var s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height);
+        var t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+        
+        projection
+            .scale(s)
+            .translate(t);
+
+        svg.selectAll(".soa")
+            .data(topojson.feature(boundaries, boundaries.objects[file_name]).features)
+            .enter().append("path")
+            .attr("class", "soa")
+            .attr("id", function(d) { return d.id })
+            .attr("d", path);
+
+    });
+    </script>
+
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-54344943-1");
+        pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
 
   </body>
 </html>
