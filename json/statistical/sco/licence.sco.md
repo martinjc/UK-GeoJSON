@@ -9,5 +9,9 @@ https://github.com/martinjc/UK-GeoJson or to http://martinjc.com
 All reuse of this data must retain the Crown Copyright declarations below
 
 -----------------------------------------------------------------------------------------------
-Contains data © Crown copyright and database right [2014] supplied by National Records of Scotland.
+Contains Ordnance Survey data © Crown copyright and database right [2014]. Ordnance Survey data
+covered by OS OpenData Licence (see pdf in repository).
+
+Contains NRS data © Crown copyright [2014] supplied by National Records of Scotland.
+
 Any further sub-licences must retain this attribution.
