@@ -5,10 +5,13 @@ This archive contains both GeoJSON and TopoJSON files of data for UK boundaries,
 All data is converted from the generalised clipped boundaries provided by the Office of National Statistics and Ordnance Survey. Data has been converted to GeoJSON from original shapefiles using ogr2ogr, then converted to TopoJSON using topojson. 
 
 
-## Folder Structure
-
-
 Anyone interested in the hierarchical structure of geographical data in the UK should take a look at this very good infographic: https://theidpblog.files.wordpress.com/2014/08/hierarchical_representation_of_uk_statistical_geographies_july_2014.pdf
+
+
+
+## Versioning
+
+16.09.14 v.0.9 - Initial 'functioning' release. Currently missing NI data - to be added ASAP.
 
 
 
@@ -23,8 +26,5 @@ Attribution can be provided by linking back to the Github repository
 https://github.com/martinjc/UK-GeoJson or to http://martinjc.com
 
 -----------------------------------------------------------------------------------------------
-Contains Ordnance Survey data © Crown copyright and database right [2014]. Ordnance Survey data 
-covered by OS OpenData Licence (see pdf in repository). Any further sub-licences must retain 
-this attribution.
-
+Contains Ordnance Survey, Office of National Statistics and National Records Scotland data © Crown copyright and database right [2014]. Ordnance Survey data covered by OS OpenData Licence.  Any further sub-licences must retain this attribution.
 

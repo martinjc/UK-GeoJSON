@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
+body {
+  padding:20px;
+  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#777;
+  font-weight:300;
+}
+
+h1 {
+  color:#222;
+  margin:0 0 20px;
+}
+
+p, table {
+  margin:0 0 10px;
+}
+
+h1 {
+  line-height:1.1;
+}
+
+h1 {
+  font-size:28px;
+}
+
+a {
+  color:#39c;
+  font-weight:400;
+  text-decoration:none;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+th, td {
+  text-align:left;
+  padding:5px 10px;
+  border-bottom:1px solid #e5e5e5;
+}
+
+.title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.content {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#data_table {
+    height: 200px;
+}
+
+#choiceform {
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+#left_column {
+    width: 35%;
+    float:left;
+}
+
+#right_column {
+    width: 65%;
+    float: right;
+}
+
+
+#download {
+    float: right;
+    font-size:28px;
+    font-weight: 700;
+}
+
+.area{ 
+    fill: #C0C0C0;
+    stroke: none;
+}
+
+.boundary {
+    fill: none;
+    stroke: #777;
+}
+
+.selected {
+    fill: #fff;
+    stroke: #777;
+    stroke-dasharray: 2,2;
+    stroke-linejoin: round;
+}
