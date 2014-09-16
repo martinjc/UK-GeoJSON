@@ -41,8 +41,6 @@ Attribution can be provided by linking back to the Github repository
 https://github.com/martinjc/UK-GeoJson or to http://martinjc.com
 
 -----------------------------------------------------------------------------------------------
-Contains Ordnance Survey data © Crown copyright and database right [2014]. Ordnance Survey data 
-covered by OS OpenData Licence (see pdf in repository). Any further sub-licences must retain 
-this attribution.
+Contains Ordnance Survey, Office of National Statistics and National Records Scotland data © Crown copyright and database right [2014]. Ordnance Survey data covered by OS OpenData Licence.  Any further sub-licences must retain this attribution.
 
 
