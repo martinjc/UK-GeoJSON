@@ -6,6 +6,8 @@ All data is converted from the generalised clipped boundaries provided by the Of
 
 Data is organised according to the geographical hierarchy to which it belongs (see below), then by area of the UK covered.
 
+An easily browsable site, with links to downloadable topoJSON is available at http://martinjc.github.io/UK-GeoJSON/
+
 ## Folder Structure
 
 Data in the folders contains the following boundary information:
