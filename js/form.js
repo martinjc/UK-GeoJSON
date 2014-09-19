@@ -73,11 +73,11 @@ function change_area() {
     var f;
     if(lad === 'national') {
         var f = 'json/' + area + '/topo_' + units + '.json';
-        d3.select('#download').attr('download', f).text('download topoJSON');
+        d3.select('#download').attr('href', f).attr('target', '_blank').text('download topoJSON');
         load_data(f, units);
     } else {
         var f = 'json/' + area + '/' + units + '_by_lad/topo_' + lad + '.json';
-        d3.select('#download').attr('download', f).text('download topoJSON');
+        d3.select('#download').attr('href', f).attr('target', '_blank').text('download topoJSON');
         load_data(f, lad);
     }
 }
