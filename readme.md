@@ -38,7 +38,7 @@ Creative Commons Attribution 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
 
 Attribution can be provided by linking back to the Github repository 
-https://github.com/martinjc/UK-GeoJson or to http://martinjc.com
+https://github.com/martinjc/UK-GeoJson or to http://martinjc.com, and all use of this data should retain the copyright declarations below
 
 -----------------------------------------------------------------------------------------------
 Contains Ordnance Survey, Office of National Statistics and National Records Scotland data © Crown copyright and database right [2014]. Ordnance Survey data covered by OS OpenData Licence.  Any further sub-licences must retain this attribution.
