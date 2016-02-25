@@ -43,6 +43,8 @@ function update_resolution_select() {
         } else if(area === 'sco') {
             options_string += '<option value = "spc">Scottish Parliament Constituencies</option>';
             options_string += '<option value = "sper">Scottish Parliament Electoral Regions</option>';            
+        } else if (area === 'ni') {
+            options_string = '<option value="wpc">Westminster Parliamentary Constituencies</option><option value="wards">Westminster Parliamentary Wards</option><option value="lgd">Local Government Districts</option>';
         }
     } else {
         options_string += '<option value="wpc">Westminster Parliamentary Constituencies</option><option value="wards">Westminster Parliamentary Wards</option>';
