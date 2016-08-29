@@ -19,6 +19,7 @@ Data in the folders contains the following boundary information:
 |json/electoral     |areas broken down into European Electoral Regions (EER), Westminster Parliamentary Constituencies (WPC), and Electoral Wards. Also contains data files for Wards and Westminster Parliamentary Constituencies collected by Local Authority District. Contains Scottish Parliamentary Constituencies and Scottish Parliamentary Regions for Scotland and Welsh Assembly Constituencies and Welsh Assembly Regions for Wales|
 |json/eurostat      |Eurostat boundaries (NUTS level 1 & 2) for England, Scotland and Wales |
 |json/statistical   |Statistical areas. Contains Output Areas, Lower Layer Super Output Areas, and Middle Layer Super Output Areas by LAD for England and Wales, and Output Areas gathered by LSOA and MSOA. Also contains Output Areas, Data Zones and Intermediate Data Zones by LAD for Scotland |
+|csv | For points rather than areas. Contains lat and lon for the stadium of every team who played in the EPL or won the top-flight |
 
 The naming convention for files depends on what data is present in the file. 
 * A file containing all of one class of data for a region will be in a folder named for that region, with the file named for the class of data. So, for example, eng/wards.json contains all the parliamentary wards for England. 
