@@ -15,8 +15,8 @@ Data in the folders contains the following boundary information:
 
 | Folder | Description |
 |:--------:|:-------------|
-|json/administrative|areas broken down into Local Authority Districts (LAD)  |
-|json/electoral     |areas broken down into European Electoral Regions (EER), Westminster Parliamentary Constituencies (WPC), and Electoral Wards. Also contains data files for Wards and Westminster Parliamentary Constituencies collected by Local Authority District. Contains Scottish Parliamentary Constituencies and Scottish Parliamentary Regions for Scotland and Welsh Assembly Constituencies and Welsh Assembly Regions for Wales|
+|json/administrative|areas broken down into Local Authority Districts (LAD) (Local Government District (LGD) in Northern Ireland) |
+|json/electoral     |areas broken down into European Electoral Regions (EER), Westminster Parliamentary Constituencies (WPC), and Electoral Wards. Also contains data files for Wards and Westminster Parliamentary Constituencies collected by Local Authority District. Contains Scottish Parliamentary Constituencies and Scottish Parliamentary Regions for Scotland and Welsh Assembly Constituencies and Welsh Assembly Regions for Wales. Contains Northern Ireland District Electoral Areas (DEA), also collected by Local Government District. Northern Ireland Assembly Area boundaries are analogous with NI Westminster Parliamentary Constituencies |
 |json/eurostat      |Eurostat boundaries (NUTS level 1 & 2) for England, Scotland and Wales |
 |json/statistical   |Statistical areas. Contains Output Areas, Lower Layer Super Output Areas, and Middle Layer Super Output Areas by LAD for England and Wales, and Output Areas gathered by LSOA and MSOA. Also contains Output Areas, Data Zones and Intermediate Data Zones by LAD for Scotland |
 |csv | For points rather than areas. Contains lat and lon for the stadium of every team who played in the EPL or won the top-flight |
