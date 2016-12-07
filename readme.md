@@ -1,3 +1,9 @@
+# UPDATE - 7/12/16
+
+The [new ONS geoportal](http://geoportal.statistics.gov.uk/) now has easily downloadable GeoJSON versions of boundary data. It may be easier to find more up to date data there than using the versions in this repository.
+
+I'll continue to keep this repo as up to date as I can, as currently the ONS is not providing TopoJSON versions of the boundaries, and also some NI data is found at other sources, so I think it's fairly useful to keep a repo with the whole of the UK data in one place
+
 # GeoJSON & TopoJSON collection of UK boundary data
 
 This archive contains both GeoJSON and TopoJSON files of data for UK boundaries, ideal for creating choropleth maps of UK areas.
