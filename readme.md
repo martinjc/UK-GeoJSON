@@ -34,7 +34,7 @@ The naming convention for files depends on what data is present in the file.
 
 
 
-Anyone interested in the hierarchical structure of geographical data in the UK should take a look at this very good infographic: https://theidpblog.files.wordpress.com/2014/08/hierarchical_representation_of_uk_statistical_geographies_july_2014.pdf
+Anyone interested in the hierarchical structure of geographical data in the UK should take a look at the very good infographics provided by the ONS: http://geoportal.statistics.gov.uk/datasets?q=Hierarchical+Representation+of+UK+Statistical+Geographies&sort_by=name&sort_order=asc
 
 
 ## Licence Information
